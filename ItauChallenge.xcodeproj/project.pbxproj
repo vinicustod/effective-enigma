@@ -15,7 +15,7 @@
 		5487502F24C7E07F0003BBAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5487502D24C7E07F0003BBAB /* LaunchScreen.storyboard */; };
 		5487503A24C7E0800003BBAB /* ItauChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487503924C7E0800003BBAB /* ItauChallengeTests.swift */; };
 		5487504724C8EB500003BBAB /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504624C8EB500003BBAB /* APIRequest.swift */; };
-		5487504924C8ECBB0003BBAB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504824C8ECBB0003BBAB /* Service.swift */; };
+		5487504924C8ECBB0003BBAB /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504824C8ECBB0003BBAB /* GithubService.swift */; };
 		5487505224C8FA660003BBAB /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504C24C8FA650003BBAB /* DetailPresenter.swift */; };
 		5487505324C8FA660003BBAB /* DetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504D24C8FA650003BBAB /* DetailModels.swift */; };
 		5487505424C8FA660003BBAB /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487504E24C8FA650003BBAB /* DetailInteractor.swift */; };
@@ -30,6 +30,11 @@
 		5487506324C8FAB50003BBAB /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487505D24C8FAB50003BBAB /* ListRouter.swift */; };
 		5487506524C8FB4E0003BBAB /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5487506424C8FB4E0003BBAB /* Detail.storyboard */; };
 		5487506724C8FB5E0003BBAB /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5487506624C8FB5E0003BBAB /* List.storyboard */; };
+		548750BE24C919B70003BBAB /* SearchRepositoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548750BD24C919B70003BBAB /* SearchRepositoriesRequest.swift */; };
+		548750C024C91D1A0003BBAB /* PullRequestsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548750BF24C91D1A0003BBAB /* PullRequestsRequest.swift */; };
+		548750C324C9325D0003BBAB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548750C224C9325D0003BBAB /* Repository.swift */; };
+		548750C524C9326B0003BBAB /* PullRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548750C424C9326B0003BBAB /* PullRequest.swift */; };
+		548750C824C9362F0003BBAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548750C724C9362F0003BBAB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +60,7 @@
 		5487503924C7E0800003BBAB /* ItauChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItauChallengeTests.swift; sourceTree = "<group>"; };
 		5487503B24C7E0800003BBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5487504624C8EB500003BBAB /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		5487504824C8ECBB0003BBAB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5487504824C8ECBB0003BBAB /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		5487504C24C8FA650003BBAB /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		5487504D24C8FA650003BBAB /* DetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModels.swift; sourceTree = "<group>"; };
 		5487504E24C8FA650003BBAB /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
@@ -70,6 +75,11 @@
 		5487505D24C8FAB50003BBAB /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		5487506424C8FB4E0003BBAB /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		5487506624C8FB5E0003BBAB /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		548750BD24C919B70003BBAB /* SearchRepositoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoriesRequest.swift; sourceTree = "<group>"; };
+		548750BF24C91D1A0003BBAB /* PullRequestsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsRequest.swift; sourceTree = "<group>"; };
+		548750C224C9325D0003BBAB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		548750C424C9326B0003BBAB /* PullRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequest.swift; sourceTree = "<group>"; };
+		548750C724C9362F0003BBAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 		5487501E24C7E07A0003BBAB /* ItauChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				548750C124C930550003BBAB /* Entity */,
 				5487504524C8EB0C0003BBAB /* Services */,
 				5487504424C8EAFA0003BBAB /* Scenes */,
 				5487501F24C7E07A0003BBAB /* AppDelegate.swift */,
@@ -146,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				5487504624C8EB500003BBAB /* APIRequest.swift */,
-				5487504824C8ECBB0003BBAB /* Service.swift */,
+				5487504824C8ECBB0003BBAB /* GithubService.swift */,
+				548750BD24C919B70003BBAB /* SearchRepositoriesRequest.swift */,
+				548750BF24C91D1A0003BBAB /* PullRequestsRequest.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -177,6 +190,16 @@
 				5487506424C8FB4E0003BBAB /* Detail.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		548750C124C930550003BBAB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				548750C224C9325D0003BBAB /* Repository.swift */,
+				548750C424C9326B0003BBAB /* PullRequest.swift */,
+				548750C724C9362F0003BBAB /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,21 +305,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548750C024C91D1A0003BBAB /* PullRequestsRequest.swift in Sources */,
 				5487506324C8FAB50003BBAB /* ListRouter.swift in Sources */,
 				5487506024C8FAB50003BBAB /* ListInteractor.swift in Sources */,
 				5487502A24C7E07A0003BBAB /* ItauChallenge.xcdatamodeld in Sources */,
 				5487502424C7E07A0003BBAB /* ViewController.swift in Sources */,
 				5487505624C8FA660003BBAB /* DetailWorker.swift in Sources */,
 				5487502024C7E07A0003BBAB /* AppDelegate.swift in Sources */,
+				548750C324C9325D0003BBAB /* Repository.swift in Sources */,
 				5487505424C8FA660003BBAB /* DetailInteractor.swift in Sources */,
+				548750C524C9326B0003BBAB /* PullRequest.swift in Sources */,
+				548750C824C9362F0003BBAB /* User.swift in Sources */,
 				5487505F24C8FAB50003BBAB /* ListModels.swift in Sources */,
 				5487504724C8EB500003BBAB /* APIRequest.swift in Sources */,
 				5487505324C8FA660003BBAB /* DetailModels.swift in Sources */,
 				5487505224C8FA660003BBAB /* DetailPresenter.swift in Sources */,
+				548750BE24C919B70003BBAB /* SearchRepositoriesRequest.swift in Sources */,
 				5487505724C8FA660003BBAB /* DetailRouter.swift in Sources */,
 				5487505E24C8FAB50003BBAB /* ListPresenter.swift in Sources */,
 				5487505524C8FA660003BBAB /* DetailController.swift in Sources */,
-				5487504924C8ECBB0003BBAB /* Service.swift in Sources */,
+				5487504924C8ECBB0003BBAB /* GithubService.swift in Sources */,
 				5487506124C8FAB50003BBAB /* ListController.swift in Sources */,
 				5487506224C8FAB50003BBAB /* ListWorker.swift in Sources */,
 			);

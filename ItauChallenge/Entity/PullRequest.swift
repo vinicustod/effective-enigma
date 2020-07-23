@@ -1,5 +1,5 @@
 //
-//  DetailWorker.swift
+//  PullRequest.swift
 //  ItauChallenge
 //
 //  Created by Vinicius Custodio on 22/07/20.
@@ -8,11 +8,7 @@
 
 import Foundation
 
-final class DetailWorker {
-
-    
-    
-    func searchRepositories(_ request: SearchRepositoriesRequest) {
-        
-    }
+struct PullRequest {
+    let title: String
+    let user: User
 }

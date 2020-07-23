@@ -12,7 +12,7 @@ protocol ServiceInterface: AnyObject {
     func send<T:Decodable>(apiRequest: APIRequest, callback: @escaping (Result<T, Error>) -> Void)
 }
 
-class ChuckNorisService: ServiceInterface {
+class GithubService: ServiceInterface {
     private let baseURL = URL(string: "")!
 
     func send<T:Decodable>(apiRequest: APIRequest, callback: @escaping (Result<T, Error>) -> Void) {
