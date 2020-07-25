@@ -84,7 +84,7 @@ class MockListRepositoriesDisplayLogic: ListRepositoriesDisplayLogic {
         displayedRepos = true
     }
 
-    func showError(_ error: Error) {
+    func showError(_ error: String) {
         displayedError = true
     }
 
