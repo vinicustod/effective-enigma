@@ -12,8 +12,17 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let listViewController = UIStoryboard(name: "ListRepositories", bundle: nil).instantiateViewController(withIdentifier: "ListRepositories")
+        let navigationController = UINavigationController(rootViewController: listViewController)
+
+        self.window?.rootViewController = navigationController
+
         return true
     }
 

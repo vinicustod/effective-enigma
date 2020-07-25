@@ -22,3 +22,9 @@ class SearchRepositoriesRequest: APIRequest {
         
     }
 }
+
+struct SearchRepositoriesResponse: Decodable {
+    let totalCount: Int
+    let incompleteResults: Bool
+    let items: [Repository]
+}

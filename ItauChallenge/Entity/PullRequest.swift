@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct PullRequest {
+struct PullRequest:Decodable {
     let title: String
     let user: User
+    let body: String
 }

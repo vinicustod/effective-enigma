@@ -15,7 +15,7 @@ class PullRequestsRequest: APIRequest {
     
     init(userRepo: String) {
         self.method = .GET
-        self.path = "/repo/\(userRepo)/pulls"
+        self.path = "/repos/\(userRepo)/pulls"
         self.parameters = [:]
     }
     
