@@ -10,7 +10,7 @@ import UIKit
 
 protocol RepoPullRequestsDisplayLogic: class {
     func showPullRequests(_ viewModel: RepoPullRequests.LoadPullRequests.ViewModel)
-    func showError(_ error: Error)
+    func showError(_ error: String)
 }
 
 final class RepoPullRequestsController: UIViewController {
@@ -59,6 +59,12 @@ final class RepoPullRequestsController: UIViewController {
         setupUI()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationItem.title = "Repositories"
+    }
+
     func setupUI() {
         interactor?.loadPullRequests(RepoPullRequests.LoadPullRequests.Request())
     }
@@ -67,8 +73,8 @@ final class RepoPullRequestsController: UIViewController {
 }
 
 extension RepoPullRequestsController: RepoPullRequestsDisplayLogic {
-    func showError(_ error: Error) {
-        let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+    func showError(_ error: String) {
+        let alert = UIAlertController(title: nil, message: error, preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             self.router?.dismiss()

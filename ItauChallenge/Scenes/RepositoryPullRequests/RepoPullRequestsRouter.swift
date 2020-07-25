@@ -22,7 +22,7 @@ final class RepoPullRequestsRouter: RepoPullRequestsRoutingLogic, RepoPullReques
     var dataStore: RepoPullRequestsDataStore?
 
     func dismiss() {
-        viewController?.navigationController?.dismiss(animated: true)
+        viewController?.navigationController?.popViewController(animated: true)
     }
 
 

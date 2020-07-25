@@ -24,7 +24,9 @@ final class ListRepositoriesPresenter: ListRepositoriesPresentationLogic {
     }
 
     func didFailLoadRepositories(error: Error) {
-        viewController?.showError(error)
+        if let error = error as? GithubAPIError {
+            viewController?.showError(error.localizedDescription)
+        }
     }
 
     func presentRepoPullRequests() {

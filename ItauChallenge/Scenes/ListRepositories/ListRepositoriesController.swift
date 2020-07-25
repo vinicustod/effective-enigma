@@ -10,7 +10,7 @@ import UIKit
 
 protocol ListRepositoriesDisplayLogic: class {
     func showRepositories(_ viewModel: ListRepositories.LoadPage.ViewModel)
-    func showError(_ error: Error)
+    func showError(_ error: String)
 
     func showRepoPullRequests()
 }
@@ -24,6 +24,7 @@ final class ListRepositoriesController: UIViewController {
         didSet {
             self.tableView.delegate = self
             self.tableView.dataSource = self
+            self.tableView.showsVerticalScrollIndicator = false
         }
     }
 
@@ -56,11 +57,28 @@ final class ListRepositoriesController: UIViewController {
 
     var currentDisplayingPage: Int = 1
     var displayableRepositories: [Repository] = []
-    var isLoading: Bool = false
+    var isLoading: Bool = false {
+        didSet {
+            // TODO: Switch for tableView.reloadRows(at: [IndexPath], with: UITableView.RowAnimation), calculateCellsToReload()
+            self.tableView.reloadData()
+        }
+    }
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupUI()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationItem.title = "Pull Requests"
+    }
+
+    func setupUI() {
         isLoading = true
+
         interactor?.loadRepositories(ListRepositories.LoadPage.Request(currentPage: currentDisplayingPage))
     }
 
@@ -119,22 +137,23 @@ extension ListRepositoriesController: UITableViewDelegate, UITableViewDataSource
 
 extension ListRepositoriesController: ListRepositoriesDisplayLogic {
     func showRepositories(_ viewModel: ListRepositories.LoadPage.ViewModel) {
-        self.isLoading = false
         displayableRepositories.append(contentsOf: viewModel.repositories)
-        tableView.reloadData()
+        isLoading = false
     }
 
-    func showError(_ error: Error) {
+    func showError(_ error: String) {
         self.isLoading = false
+
         if displayableRepositories.count == 0 {
             self.showAlert(error)
         }
     }
 
-    func showAlert(_ error: Error) {
-        let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+    func showAlert(_ error: String) {
+        let alert = UIAlertController(title: nil, message: error, preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Tentar novamente", style: .default, handler: { _ in
+            self.isLoading = true
             self.interactor?.loadRepositories(ListRepositories.LoadPage.Request(currentPage: self.currentDisplayingPage))
         }))
 

@@ -22,7 +22,9 @@ final class RepoPullRequestsPresenter: RepoPullRequestsPresentationLogic {
     }
 
     func didFailFindPullRequests(_ error: Error) {
-        viewController?.showError(error)
+        if let error = error as? GithubAPIError {
+            viewController?.showError(error.localizedDescription)
+        }
     }
 
 }
